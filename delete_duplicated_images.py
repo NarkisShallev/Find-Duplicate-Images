@@ -5,10 +5,8 @@ import imagehash
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 
-# -------- Settings --------
 IMAGE_EXTS = (".jpg", ".jpeg", ".jfif", ".png", ".bmp", ".gif", ".webp")
 
-# -------- Helper functions --------
 def get_image_hashes(image_path):
     """Generate different hashes for the image (including flipped and mirrored versions)"""
     try:
@@ -46,7 +44,6 @@ def find_duplicate_images(root_dir):
 
     return duplicates
 
-# -------- GUI --------
 class DuplicateViewer(tk.Tk):
     def __init__(self, duplicates):
         super().__init__()
@@ -115,16 +112,16 @@ class DuplicateViewer(tk.Tk):
         except Exception as e:
             messagebox.showerror("Error", str(e))
 
-# -------- Main --------
 if __name__ == "__main__":
     folder = filedialog.askdirectory(title="Select a folder to scan")
     if folder:
-        print("⏳ Scanning folder... This may take some time.")
+        print("Scanning folder... This may take some time.")
         duplicates = find_duplicate_images(folder)
         if duplicates:
             print(f"Found {len(duplicates)} pairs of duplicate images.")
             app = DuplicateViewer(duplicates)
             app.mainloop()
         else:
-            print("✅ No duplicate images found.")
+            print("No duplicate images found.")
             messagebox.showinfo("Done", "No duplicate images found.")
+
