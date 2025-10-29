@@ -1,4 +1,4 @@
-# 🖼️ Find Duplicate Images
+# Find Duplicate Images
 
 A Python tool that scans a folder for **duplicate or mirrored images** and allows you to **view and delete duplicates** easily via a simple **Tkinter GUI**.
 
@@ -12,15 +12,14 @@ A Python tool that scans a folder for **duplicate or mirrored images** and allow
 
 ---
 
-## 🧩 Requirements
+## Getting Started
+### 🧩 Requirements
 Make sure you have Python 3.8+ installed, then install dependencies:
 ```bash
 pip install pillow imagehash
 ```
 
----
-
-## 🗂️ Usage
+### 🗂️ Usage
 Run the script:
 ```bash
 python delete_duplicated_images.py
